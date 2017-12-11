@@ -1,0 +1,51 @@
+{
+  "name": "firebase-import-user",
+  "version": "0.0.1",
+  "description": "Import federated users into firebase through cloud functions.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phani1kumar/firebase-import-user.git"
+  },
+  "scripts": {
+    "start": "firebase serve --only functions:importuser",
+    "deploy": "firebase deploy --only functions:importuser",
+    "test": "node_modules/mocha/bin/mocha --timeout 15000 -R spec **/*.spec.js"
+  },
+  "private": true,
+  "author": "Venkata Phani Kumar Mangipudi, phani1kumar@gmail.com",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "configstore": "^1.2.0",
+    "lodash": "^4.6.1",
+    "request": "^2.58.0",
+    "rsvp": "^3.0.18",
+    "aes-js": "^3.1.0",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-handlebars": "latest",
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7",
+    "jsonwebtoken": "^8.1.0",
+    "jsrsasign": "^8.0.3",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "node-inspector": "^0.12.7",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0",
+    "sinon": "^2.3.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": 2
+    }
+  }
+}
